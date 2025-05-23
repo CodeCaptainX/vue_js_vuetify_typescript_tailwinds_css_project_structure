@@ -6,7 +6,7 @@ import LoginPage from "@/pages/LoginPage.vue";
 
 const routes = [
   {
-    path: "/home",
+    path: "/",
     component: HomePage,
   },
   {
