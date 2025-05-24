@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-primary: oklch(0.84 0.18 117.33);  /* Avocado 500 */
+  --color-primary-hover: oklch(0.68 0.16 117.5);
+  --color-primary-muted: oklch(0.94 0.11 115.03);
+
+  --color-secondary: oklch(0.72 0.18 320);  /* Grape 400 */
+  --color-secondary-hover: oklch(0.60 0.17 320);
+  --color-secondary-muted: oklch(0.88 0.10 320);
+
+  /* Status Colors */
+  --color-success: oklch(0.75 0.18 140);    /* Bright green */
+  --color-warning: oklch(0.90 0.20 85);     /* Yellow-orange */
+  --color-error:   oklch(0.65 0.20 27);     /* Warm red */
+  --color-info:    oklch(0.78 0.15 250);    /* Soft blue */
+
+  /* Backgrounds / Surfaces */
+  --color-background: oklch(0.98 0 0);      /* White */
+  --color-surface:    oklch(0.94 0 0);      /* Light gray for cards */
+  --color-surface-hover: oklch(0.87 0 0);
+  --color-border:     oklch(0.80 0 0);      /* Gray 300 */
+
+  /* Text Colors */
+  --color-text:       oklch(0.20 0 0);      /* Very dark gray */
+  --color-text-muted: oklch(0.45 0 0);      /* Mid gray */
+  --color-text-inverse: oklch(0.98 0 0);    /* For dark backgrounds */
+  
+}
