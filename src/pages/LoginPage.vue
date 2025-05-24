@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '@/stores/auth';
 // import { useChannelStore } from '@/stores/channel/channelStore';
-
+const { t } = useI18n()
 const username = ref<string>('')
 const password = ref<string>('')
 const authStore = useAuthStore()
@@ -123,6 +124,7 @@ onMounted(() => {
 <template>
 
     <div class="loginContainer flex justify-center items-center w-full h-screen">
+        <h1>{{ t('welcome') }}</h1>
         <v-form class="md:w-[450px] w-[90%]" @submit.prevent="handleLogin">
             <v-container
                 class="mb-20 flex flex-col items-center rounded-md w-full bg-opacity-90 backdrop-blur-sm bg-zinc-800 p-0 overflow-hidden text-white border border-solid border-custom-border">

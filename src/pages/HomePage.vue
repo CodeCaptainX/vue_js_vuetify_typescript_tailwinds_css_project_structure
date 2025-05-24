@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 // Types
 interface Particle {
@@ -111,15 +112,14 @@ onMounted(() => {
         showContent.value = true
     }, 500)
 
-    // Stop particle animation after some time for performance
-    /*    setTimeout(() => {
-           isAnimating.value = false
-       }, 10000) */
 })
 </script>
 
 <template>
+
     <div class="min-h-screen celebration-bg relative overflow-hidden flex items-center justify-center">
+
+
         <!-- Animated Background Stars -->
         <div v-if="isAnimating" class="absolute inset-0 overflow-hidden">
             <div v-for="particle in particles" :key="particle.id" class="absolute text-white star-blink" :style="{
@@ -149,7 +149,7 @@ onMounted(() => {
             </div>
 
             <!-- Main Heading -->
-            <h1 class="text-6xl md:text-8xl font-black text-white mb-6 tracking-tight">
+            <h1 class="text-6xl md:text-8xl font-black text-white mb-6 tracking-tight ">
                 <span class="block animate-pulse text-5xl mb-4">🎉</span>
                 <span class="gradient-text">Congratulations!</span>
             </h1>
@@ -223,6 +223,9 @@ onMounted(() => {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+/* .khmer {
+    font-family: 'Kantumruy Pro', sans-serif;
+} */
 
 .star-blink {
     animation: starBlink 2s ease-in-out infinite;
