@@ -73,9 +73,11 @@ const createParticles = (): void => {
 }
 
 const handleStartNextProject = (): void => {
-    console.log('Starting next project...')
-    // Add your navigation logic here
-    alert('Ready to start your next amazing project! 🚀')
+    console.log('Starting next project...');
+    alert('Ready to start your next amazing project! 🚀');
+
+    // Open a new tab to an external website
+    window.open('https://vuetifyjs.com/en/', '_blank');
 }
 
 const handleShareAchievement = async (): Promise<void> => {
@@ -110,9 +112,9 @@ onMounted(() => {
     }, 500)
 
     // Stop particle animation after some time for performance
-    setTimeout(() => {
-        isAnimating.value = false
-    }, 10000)
+    /*    setTimeout(() => {
+           isAnimating.value = false
+       }, 10000) */
 })
 </script>
 
@@ -154,13 +156,15 @@ onMounted(() => {
 
             <!-- Subheading -->
             <h2 class="text-2xl md:text-4xl font-bold text-white mb-8 opacity-90">
-                You Created Your First Vue 3 + TypeScript Project
+                You Created Your First Vue 3 + Vuetify + Tailwind css + TypeScript Project
             </h2>
 
             <!-- Description Card -->
             <div class="bg-white/10 backdrop-blur-lg !p-5  rounded-3xl  mb-12 card-hover border border-white/20">
                 <p class="text-lg md:text-xl text-white leading-relaxed mb-6">
-                    This marks the beginning of your amazing development journey with modern Vue.js and TypeScript!
+                    This marks the beginning of your amazing development journey with modern Vue.js Vuetify Tailwind css
+                    and
+                    TypeScript!
                     You've mastered component composition, reactive references, and type-safe development.
                 </p>
 
@@ -178,7 +182,7 @@ onMounted(() => {
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button @click="handleStartNextProject"
                     class="bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30">
-                    Start Next Project 🚀
+                    Start Building 🚀
                 </button>
                 <button @click="handleShareAchievement"
                     class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 shadow-xl focus:outline-none focus:ring-4 focus:ring-white/30">
@@ -190,12 +194,14 @@ onMounted(() => {
             <div class="mt-12 bg-black/20 backdrop-blur-sm rounded-2xl !p-6 border border-white/10">
                 <h3 class="text-white font-semibold text-lg mb-3">🛠️ Your Tech Stack</h3>
                 <div class="flex flex-wrap justify-center gap-3 text-sm">
-                    <span class="bg-green-600/20 text-green-300 px-3 py-1 rounded-lg border border-green-500/30">Vue
+                    <span class="bg-green-600/20 text-green-300 px-3 py-1 rounded-lg border border-green-500/30"> Vue
                         3</span>
+                    <span class="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-lg border border-green-500/30">
+                        Vuetify </span>
                     <span
                         class="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-lg border border-blue-500/30">TypeScript</span>
                     <span class="bg-cyan-600/20 text-cyan-300 px-3 py-1 rounded-lg border border-cyan-500/30">Tailwind
-                        CSS</span>
+                        CSS 4</span>
                     <span
                         class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-lg border border-purple-500/30">Composition
                         API</span>
@@ -259,7 +265,7 @@ onMounted(() => {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #b88ee2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
