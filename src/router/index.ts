@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // import { useAuthStore } from "@/stores/auth/auth";
 import HomePage from "@/pages/HomePage.vue";
 import LoginPage from "@/pages/LoginPage.vue";
+import { useAuthStore } from "@/stores/auth";
 
 const routes = [
   {
@@ -20,15 +21,15 @@ const router = createRouter({
   routes,
 });
 
-// router.beforeEach((to, from, next) => {
-//   const authStore = useAuthStore();
-//   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
-//     next("/login");
-//   } else if (to.path === "/login" && authStore.isAuthenticated) {
-//     next("/");
-//   } else {
-//     next();
-//   }
-// });
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore();
+  if (to.meta.requiresAuth && !authStore.isAuthenticated) {
+    next("/login");
+  } else if (to.path === "/login" && authStore.isAuthenticated) {
+    next("/");
+  } else {
+    next();
+  }
+});
 
 export default router;
