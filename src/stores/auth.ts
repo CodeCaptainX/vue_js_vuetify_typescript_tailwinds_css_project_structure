@@ -93,9 +93,6 @@ export const useAuthStore = defineStore("auth", {
       this.isLogout = true;
       this.message = "Logged out successfully.";
       localStorage.removeItem("authToken");
-      localStorage.removeItem("channel");
-      localStorage.removeItem("currentChannel");
-      localStorage.removeItem("currentActiveTap");
     },
   },
 });
